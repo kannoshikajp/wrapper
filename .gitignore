@@ -1,0 +1,11 @@
+# Visual Studio build artifacts
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.VC.opendb
+*.ipch
+
+# Local settings
+.claude/
