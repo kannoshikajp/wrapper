@@ -50,6 +50,9 @@ wrapper.exe
 # Pass additional arguments to target executable
 wrapper.exe --extra-arg value
 
+# Pass an argument that has the same name as a wrapper option
+wrapper.exe -- target.exe --config value
+
 # Use a custom configuration file
 wrapper.exe -c "C:\path\to\custom.ini"
 
@@ -64,6 +67,11 @@ wrapper.exe -v
 | `-c, --config <file>` | Path to a custom INI configuration file |
 | `-v, --verbose` | Print environment and process launch diagnostics |
 | `-h, --help` | Display help message |
+| `--` | Stop parsing wrapper options; forward all following arguments |
+
+Arguments received after the wrapper options are forwarded as individual
+Windows command-line arguments, including empty arguments, whitespace, quotes,
+and trailing backslashes.
 
 ## Building
 
